@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/gamemanager.js"></script>
+    <script src="scripts/player.js"></script>
+    <script src="scripts/enemy.js"></script>
+    <title>Game</title>
+</head>
+<body>
+    <div class="header">
+        <p>Битв бесконечных край</p>
+        <h2>Выбери героя!</h2>
+    </div>
+    <div class="interface">
+        <a href="#" onclick="GameManager.setGameStart('Warrior')">
+            <img src="images/warrior.jpg" alt="warrior">
+            <div>
+                <h3>Воин</h3>
+                <p>Воин - персонаж ближнего боя. Используя щит и меч в битве, он добивается гармоничного сочетания между защитой и атакой.</p>
+            </div>
+        </a>
+        <a href="#"  onclick="GameManager.setGameStart('Giant')">
+            <img src="images/giant.jpg" alt="giant">
+            <div>
+                <h3>Варвар</h3>
+                <p>Варвар - монструозное создание, без разбора разящее врагов огромным двуручным топором.
+                Он более эффективен в бою с большим числом противников, чем в дуэли.</p>
+            </div>
+        </a>
+        <a href="#" onclick="GameManager.setGameStart('Archer')">
+            <img src="images/archer.jpg" alt="archer">
+            <div>
+                <h3>Лучник</h3>
+                <p>Лучник – это персонаж, который атакует врагов на дистанции и избегает атак противника ловкими передвижениями.
+                В отличии от других персонажей может использовать и арбалет, и лук, что позволяет ему быстро адаптироваться к любым
+                ситуациям на поле боя.</p>
+            </div>
+        </a>
+        <a href="#" onclick="GameManager.setGameStart('Witch')">
+            <img src="images/witch.jpg" alt="witch">
+            <div>
+                <h3>Волшебница</h3>
+                <p>С ранних лет познав магическую силу, Волшебница использует природные стихии в качестве мощного оружия.
+                Используя огонь, воду, лед, ветер, молнию, землю как оружие дальнего расстояния, она поджигает, замораживает своих
+                врагов.</p>
+            </div>
+        </a>
+
+    </div>
+    <div class="actions">
+    
+    </div>
+    <div class="arena">
+
+    </div>
+    <div class="enemy">
+
+    </div>
+
+</body>
+</html>

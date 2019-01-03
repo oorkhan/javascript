@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>random</title>
+</head>
+<body>
+    <input type="text" name="start" id="start">
+    <input type="text" name="range" id="range">
+
+    <button type="button" id="btn-calc" onclick="getRandomNumber()">Random</button>
+    <h3 id="random"></h3>    
+</body>
+<script>
+    let getRandomNumber = function (start, range) {
+        start = document.getElementById('start').value;
+        range = document.getElementById('range').value;
+        let getRandom = Math.floor((Math.random() * range) + start);
+        while (getRandom > range) {
+            getRandom = Math.floor((Math.random() * range) + start);
+        }
+        document.getElementById('random').innerHTML = "Random number is: "+getRandom;
+        console.log(getRandom);
+    }
+</script>
+</html>

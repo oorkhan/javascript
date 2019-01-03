@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>events</title>
+</head>
+<body>
+    <h2>with event handlers 2 functions</h2>
+    <form action="#" method="POST">
+        <input type="text" >
+        <button type="submit" id="btn">Login</button>
+    </form>
+    <h2>with event listeners</h2>
+    <form action="#" method="POST">
+        <input type="text">
+        <button type="submit" id="btn2">Login</button>
+    </form>
+</body>
+<script>
+    let btn = document.querySelector("#btn");
+    function firstFunction(){
+        btn.innerHTML = "event handler";
+    }
+    function secondFunction() {
+        btn.style.cssText = `background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text - align: center;
+        text - decoration: none;
+        display: inline - block;
+        font - size: 16px;`;
+    }
+
+    function btnClick(e){
+        e.preventDefault();
+        firstFunction();
+        secondFunction();
+    }
+    btn.onclick = btnClick;
+
+    // event listeners
+    let btn2 = document.querySelector("#btn2");
+        function thirdFunction(e, name) {
+            e.preventDefault();
+            btn2.innerHTML = "event listener " + name;
+        }
+        function fouthFunction() {
+            btn2.style.cssText = `background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text - align: center;
+            text - decoration: none;
+            display: inline - block;
+            font - size: 16px;`;
+        }
+        btn2.addEventListener("click", function(e){
+            thirdFunction(e, "farid"); //passing parameters
+        });
+        btn2.addEventListener("click", function(){
+            fouthFunction();
+        } );
+</script>
+</html>
